@@ -1,0 +1,198 @@
+@import '@/assets/scss/utils/_variables.scss';
+$colums-amount: 15;
+$colums-amount-mobile: 4;
+// box size
+$cell-width: 70px;
+$cell-height: 60px;
+// bar size
+$base-bar-height: 40px;
+$map-bg-bar: (
+    '0':$success,
+    '0-4':linear-gradient(to right, $success, $peach),
+    '1':$danger,
+    '1-0':linear-gradient(to right, $danger, $success),
+    '2':$warning,
+    '2-0':linear-gradient(to right, $warning, $success),
+    '3':$blue,
+    '3-0':linear-gradient(to right, $blue, $success),
+    '4':linear-gradient(to right, $pink, $peach),
+    '4-0':linear-gradient(to right, $peach, $success),
+    '6':$purple,
+    );
+.t-views__theRoomArrangement {
+  // table__container
+  // table
+  .t-table__item {
+    position: relative;
+
+    display: table;
+    overflow: hidden;
+
+    border-collapse: collapse;
+  }
+  .t-cell {
+    position: relative;
+
+    display: table-cell;
+
+    min-width: $cell-width;
+
+    text-align: center;
+    vertical-align: middle;
+
+    border: 1px solid $white-bis;
+    background-color: $white;
+  }
+
+  .t-table--mobile {
+    .t-table__row {
+      display: table-row;
+
+      max-width: $cell-width * $colums-amount-mobile;
+      height: $cell-height;
+    }
+  }
+  //th-currentDay
+  .t-cell--current {
+    font-size: 10px;
+
+    height: inherit;
+
+    color: #fff;
+    background-color: $primary;
+  }
+  .t-cell--nonCurrent {
+    font-size: 10px;
+
+    height: inherit;
+
+    color: $grey-light;
+  }
+  //date picker
+  .t-cell--datePicker {
+    cursor: pointer;
+  }
+  //cell--available
+  .t-cell--available {
+    opacity: .4;
+    background-color: $success;
+  }
+  .t-cell--disable {
+    opacity: .4;
+    background-color: $danger;
+  }
+  //room__row--bar
+  .t-bar {
+    position: absolute;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: $base-bar-height;
+    padding: 10px;
+
+    cursor: move;
+    transition: all ease .3s;
+
+    opacity: .8 !important;
+    opacity: .999; // 解決 border 沒遮住的背景問題
+    border-radius: 45px;
+    box-shadow: 0 10px 10px -5px #c2c2c2;
+
+    div {
+      color: $white;
+    }
+  }
+
+  //displayBarTextWrapper
+  .t-bar__item {
+    width: 100%;
+  }
+
+  // @each $key, $value in $map-bg-bar {
+  //   div[data-room-status^='#{$key}'] {
+  //     background: $value;
+  //   }
+  // }
+}
+.t-card--unArrangement {
+  height: 40px;
+  margin: 13px;
+
+  border-radius: 5px;
+  background-color: #344955;
+}
+
+@media (max-width: 600px) {
+    .t-table--mobile {
+    .v-popover > div {
+      width: inherit;
+    }
+
+    //room__row--box
+    .t-table__row {
+      display: table-row;
+
+      max-width: $cell-width * $colums-amount;
+      height: $cell-height;
+    }
+
+    .t-table__row.t-table__row--header.t-table__row--header--sticky {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+    }
+
+    .t-table__row.t-table__row--header.t-table__row--header--hidden {
+      opacity: 0;
+    }
+    // cell
+
+
+    /**
+     注意：休息單獨狀態，需要加上一個 class margin:0 auto,border-radius:50%;
+    */
+  }
+}
+@media (min-width: 600px) {
+  .t-table {
+    .v-popover > div {
+      width: inherit;
+    }
+
+    //room__row--box
+    .t-table__row {
+      display: table-row;
+
+      max-width: $cell-width * $colums-amount;
+      height: $cell-height;
+    }
+
+    .t-table__row.t-table__row--header.t-table__row--header--sticky {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+    }
+
+    .t-table__row.t-table__row--header.t-table__row--header--hidden {
+      opacity: 0;
+    }
+    // cell
+
+
+    /**
+     注意：休息單獨狀態，需要加上一個 class margin:0 auto,border-radius:50%;
+    */
+  }
+}
+@media (max-width: 600px) and (max-width: 960px) {
+}
+@media (min-width: 960px) and (max-width: 1264px) {
+}
+@media (min-width: 1264px) and (max-width: 1904px) {
+}
+@media (min-width: 1904px) {
+}

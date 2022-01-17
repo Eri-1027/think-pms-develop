@@ -1,0 +1,30 @@
+//theme
+$primary: #344955;
+$secondary: #6c6c6c;
+$success: #00a6c1;
+$warning: #fcb115;
+$danger: #b91c1c;
+$blue: #1e5ea8;
+$peach: #fe3982;
+$pink: #ec7aa4;
+$purple: #a72dc9;
+$white: #ffffff;
+
+$black-bis: hsl(0, 0%, 8%);
+$black-ter: hsl(0, 0%, 16%);
+$grey-darker: hsl(0, 0%, 32%);
+$grey-dark: hsl(0, 0%, 48%);
+$grey-light: hsl(0, 0%, 56%);
+$grey-lighter: hsl(0, 0%, 72%);
+$white-ter: hsl(0, 0%, 88%);
+$white-bis: hsl(0, 0%, 92%); // orgin is 96
+
+// box
+$box-height: 40px;
+$box-xs-height: $box-height * 1.25;
+$box-sm-height: $box-height;
+
+// card
+$card-height: $box-height * 3;
+$card-xs-height: $box-xs-height * 3;
+$card-sm-height: $card-height;

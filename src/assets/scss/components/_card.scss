@@ -1,0 +1,90 @@
+@import '../utils/variables';
+@import '../components/box';
+@import '../utils/variables';
+
+@mixin flex-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-xs-card {
+  min-height: $box-xs-height * 3;
+  max-height: $box-xs-height * 3;
+}
+
+.t-sm-card {
+  min-height: $box-sm-height * 3;
+  max-height: $box-sm-height * 3;
+  padding: 0 8px;
+}
+
+.t-card {
+  position: relative;
+
+  width: 100%;
+
+  transition: opacity .5s;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+  // &:hover {
+  //   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+  // }
+  &:hover {
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12) !important;
+  }
+  div ,
+  span {
+    padding: 2px;
+  }
+  .t-card__header {
+    padding: 2px 5px;
+  }
+  .t-card__header--borderTop {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .t-card__text {
+    padding: 2px;
+  }
+  .t-card__text--title {
+    padding: 2px;
+  }
+  .t-card__action {
+    padding: 4px;
+  }
+}
+
+.t-card--link {
+  cursor: pointer;
+}
+
+.t-card--dark {
+  div ,
+  span {
+    color: #fff;;
+  }
+}
+
+.t-card--pill {
+  border-radius: 50px;
+}
+
+.t-card--singleline {
+  @include flex-default;
+}
+
+.t-card--outer {
+  width: 248px;
+  height: 120px;
+
+  @include flex-default;
+}
+
+.t-card--fadeout {
+  opacity: .45 !important;
+}
+.t-card--select {
+  opacity: 1 !important;
+}

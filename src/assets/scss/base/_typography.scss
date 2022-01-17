@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import '../utils/variables';
+html ,
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.t-text--title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.t-text--subtitle {
+  font-size: 16px;
+  font-weight: 400;
+}
+.t-text--subtitle2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.t-text--description {
+  font-size: 10px;
+}
+
+.t-text__box {
+  height: 90%;
+}
+
+.t-text--border {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.t-text--circle {
+  border-radius: 50%;
+}
+
+.t-text--circle--xs {
+  width: 26px;
+  height: 26px;
+
+  border: 2px solid $white;
+}
+
+.t-text--circle--sm {
+  width: 40px;
+  height: 40px;
+
+  border: 3px solid $white;
+}
+
+.t-text--circle--cancelXs {
+  position: relative;
+
+  border: 2px solid $danger !important;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 22px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    background-color: $danger;
+  }
+}
+
+.t-text--circle--cancelSm {
+  position: relative;
+
+  border: 3px solid $danger;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 2px);
+
+    width: 3px;
+    height: 37px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    background-color: $danger;
+  }
+}
+
+.t-text--circle--secondary {
+  border-color: $grey-lighter;
+}

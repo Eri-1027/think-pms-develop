@@ -1,0 +1,123 @@
+/**
+ * size: xs, sm ,md ,lg ,xl
+ * xs : < 600
+ * sm : 600 < 960
+ * md : 960 < 1264
+ * lg : 1264 < 1904
+ * xl : 1904 < 
+ */
+@import '../utils/variables';
+
+/* ------------------------------------ *\
+    MOBILE
+\* ------------------------------------ */
+// map
+/* base */
+@mixin flex-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.t-xs-box {
+  min-height: $box-xs-height;
+  max-height: $box-xs-height;
+
+  @include flex-default;
+}
+
+.t-xs-box--1-2r {
+  min-height: $box-xs-height * .75;
+  max-height: $box-xs-height * .75;
+
+  @include flex-default;
+}
+
+.t-xs-box--1-4r {
+  min-height: $box-xs-height * .5;
+  max-height: $box-xs-height * .5;
+
+  @include flex-default;
+}
+
+/* 容納四個 row */
+.t-xs-box--2r {
+  min-height: $box-xs-height * 1.5;
+  max-height: $box-xs-height * 1.5;
+
+  @include flex-default;
+}
+
+/* 容納四個 row */
+.t-xs-box--3r {
+  min-height: $box-xs-height * 1.75;
+  max-height: $box-xs-height * 1.75;
+
+  @include flex-default;
+}
+
+/* 容納四個 row */
+.t-xs-box--4r {
+  min-height: $box-xs-height * 2;
+  max-height: $box-xs-height * 2;
+
+  @include flex-default;
+}
+
+.t-box--border {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding:10px;
+
+  @include flex-default;
+}
+
+
+
+
+/* ------------------------------------ *\
+    > MOBILE
+\* ------------------------------------ */
+.t-sm-box {
+  min-height: $box-sm-height;
+  max-height: $box-sm-height;
+
+  @include flex-default;
+}
+
+.t-sm-box--1-2r {
+  min-height: $box-sm-height * .75;
+  max-height: $box-sm-height * .75;
+
+  @include flex-default;
+}
+
+.t-sm-box--1-4r {
+  min-height: $box-sm-height * .5;
+  max-height: $box-sm-height * .5;
+
+  @include flex-default;
+}
+
+/* 容納四個 row */
+.t-sm-box--2r {
+  min-height: $box-sm-height * 1.5;
+  max-height: $box-sm-height * 1.5;
+
+  @include flex-default;
+}
+
+/* 容納四個 row */
+.t-sm-box--3r {
+  min-height: $box-sm-height * 1.75;
+  max-height: $box-sm-height * 1.75;
+
+  @include flex-default;
+}
+
+/* 容納四個 row */
+.t-sm-box--4r {
+  min-height: $box-sm-height * 2;
+  max-height: $box-sm-height * 2;
+
+  @include flex-default;
+}

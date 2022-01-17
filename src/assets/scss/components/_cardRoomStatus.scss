@@ -1,0 +1,62 @@
+// Mobile
+// 當日房況卡片 style guide
+// 最小區塊高度：45px;
+// 卡片基本高度：45px * 3
+// Desktop
+// 最小區塊高度：40px;
+// 卡片基本高度：40px * 3
+// 卡片基本寬度：40px * 6
+
+@import '../utils/variables';
+@import '../components/box';
+
+.t-component__cardRoomStatus {
+  @media (max-width: 600px) {
+    // .t-card {
+    //   width: $box-xs-height * 6;
+    //   height: $box-xs-height * 3;
+
+    //   cursor: pointer;
+    //   transition: all ease .5s;
+
+    //   background-color: transparent !important;
+    // }
+    // .t-box {
+    //   min-height: $cell-height-mobile;
+    //   max-height: $cell-height-mobile;
+    // }
+  }
+  @media (min-width: 600px) {
+    // .t-card {
+    //   width: $card-width-desktop;
+    //   height: $cell-height-desktop * 3;
+
+    //   cursor: pointer;
+    //   transition: all ease .5s;
+
+    //   background-color: transparent !important;
+    // }
+    // .t-box {
+    //   min-height: $cell-height-desktop;
+    //   max-height: $cell-height-desktop;
+    // }
+  }
+  @media (max-width: 600px) and (max-width: 960px) {
+  }
+  @media (min-width: 960px) and (max-width: 1264px) {
+  }
+  @media (min-width: 1264px) and (max-width: 1904px) {
+  }
+  @media (min-width: 1904px) {
+  }
+}
+  // .t-box--half {
+  //   min-height: $cell-height-desktop / 2;
+  //   max-height: $cell-height-desktop / 2;
+  // }
+
+  // .t-box--action {
+  //   min-height: $cell-height-desktop / 1.1;
+  //   max-height: $cell-height-desktop / 1.1;
+  // }
+

@@ -1,0 +1,25 @@
+@import '../utils/variables';
+.weekDays-selector input {
+ display: none!important;
+}
+
+.weekDays-selector input[type=checkbox] + label {
+ line-height: 25px;
+
+ display: inline-block;
+
+ width: 25px;
+ height: 25px;
+ margin-right: 6px;
+
+ cursor: pointer;
+ text-align: center;
+ color: $white;
+ border-radius: 6px;
+ background: $grey-light;
+}
+
+.weekDays-selector input[type=checkbox]:checked + label {
+ color: $white;
+ background: $success;
+}

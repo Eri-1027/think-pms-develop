@@ -1,0 +1,21 @@
+$roomType-group-height: 40px;
+.roomType__group {
+  .roomType__item--name {
+    min-width: 100px;
+    height: $roomType-group-height;
+  }
+
+  .roomType__item--number {
+    min-width: 30px;
+    height: $roomType-group-height;
+  }
+
+  .roomType__item--unit {
+    min-width: 20px;
+    height: $roomType-group-height;
+  }
+
+  .roomType__item--discount {
+    height: $roomType-group-height;
+  }
+}

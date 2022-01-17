@@ -1,0 +1,22 @@
+// utils
+@import './utils/variables';
+@import './utils/layout';
+// base
+@import './base/theme';
+@import './base/typography';
+@import './base/base';
+// vendors
+@import './vendors/vuetify';
+// views
+@import './views/orderList';
+@import './views/roomArrangement';
+// components
+@import './components/box';
+@import './components/card';
+@import './components/cardRoomStatus';
+@import './components/roomType';
+@import './components/checkboxWeek';
+
+.bd {
+ border: 1px solid orchid;
+}
